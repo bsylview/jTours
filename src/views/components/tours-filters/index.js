@@ -52,16 +52,11 @@ export class ToursFilters extends Component {
             <i className="material-icons">view_list</i>
           </Link>
         </button>
-        <button className="btn btn-secondary" title="Sort by reviews descending">
-          <Link activeClassName="active" to={{pathname: '/', query: {sort: 'reviews', order: Order.DESCENDING}}}>
-            <i className="material-icons">sort</i>
-          </Link>
-        </button>
         <button className="btn btn-secondary" title="Filter by rating" onClick={this.openModal.bind(this)}>
           <i style={{color: '#0275d8'}} className="material-icons">&#xE152;</i>
         </button>
 
-       <Modal className="modal-filters" isOpen={this.state.isOpen} size='modal-lg' onRequestHide={this.hideModal.bind(this)}>
+       <Modal className="modal-filters" isOpen={this.state.isOpen} size="modal-lg" onRequestHide={this.hideModal.bind(this)}>
          <ModalHeader>
            <ModalClose onClick={this.hideModal.bind(this)} />
            <ModalTitle>Filters</ModalTitle>
@@ -73,10 +68,10 @@ export class ToursFilters extends Component {
            </div>
          </ModalBody>
          <ModalFooter>
-           <button className='btn btn-default' onClick={this.hideModal.bind(this)}>
+           <button className="btn btn-default" onClick={this.hideModal.bind(this)}>
              Close
            </button>
-           <button className='btn btn-primary' onClick={this.applyFilters.bind(this)}>
+           <button className="btn btn-primary" onClick={this.applyFilters.bind(this)}>
              Apply filters
            </button>
          </ModalFooter>
